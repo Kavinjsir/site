@@ -1,23 +1,30 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
+import { Link, Text } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>TypeScript starter for Next.js</title>
-        <meta
-          name="description"
-          content="TypeScript starter for Next.js that includes all you need to build amazing apps"
-        />
+        <title>THouse</title>
+        <meta name="description" content="Kavinjsir's Homepage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <Text color="teal.500">
+            Welcome to{` `}
+            <Link href="https://chakra-ui.com" isExternal>
+              <Text color="teal.300">
+                THouse!! <ExternalLinkIcon mx="2px" />
+              </Text>
+            </Link>
+          </Text>
         </h1>
 
         <p className={styles.description}>
