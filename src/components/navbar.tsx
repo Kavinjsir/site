@@ -51,14 +51,7 @@ const Navbar = (props: React.ComponentProps<any>) => {
       zIndex={2}
       {...props}
     >
-      <Container
-        display="flex"
-        p={2}
-        maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
+      <Container display="flex" p={2} maxW="container.md">
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={`tighter`}>
             <Logo />
@@ -81,7 +74,7 @@ const Navbar = (props: React.ComponentProps<any>) => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Box flex={1}>
           <Box ml={2} display={{ base: `inline-block`, md: `none` }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
