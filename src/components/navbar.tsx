@@ -49,7 +49,7 @@ const Navbar = (props: React.ComponentProps<any>) => {
       bg={useColorModeValue(`#ffffff40`, `#20202380`)}
       css={{ backdropFilter: `blur(10px)` }}
       zIndex={2}
-      {...props}
+      /*{...props}*/
     >
       <Container display="flex" p={2} maxW="container.md">
         <Flex align="center" mr={5}>
