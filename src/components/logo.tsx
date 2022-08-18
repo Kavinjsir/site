@@ -4,7 +4,6 @@ import { Text, useColorModeValue } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
 const LogoBox = styled.span`
-  font-weight: bold;
   font-size: 18px;
   display: inline-flex;
   align-items: center;
@@ -33,14 +32,7 @@ const Logo = () => {
       <a>
         <LogoBox>
           <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text
-            color={textColor}
-            fontFamily='M PLUS Rounded 1c", sans-serif'
-            fontWeight="bold"
-            ml={3}
-          >
-            Tony Gu
-          </Text>
+          <Text color={textColor}>Tony Gu</Text>
         </LogoBox>
       </a>
     </Link>

@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import {
   Container,
   Box,
-  Link,
+  Link as ChakraLink,
   Stack,
   Heading,
   Flex,
@@ -25,20 +25,25 @@ interface LinkItemProps {
 const LinkItem = ({ href, path, children }: LinkItemProps) => {
   const active = path === href;
   const inactiveColor = useColorModeValue(`gray200`, `whiteAlpha.900`);
+
   return (
     <NextLink href={href} passHref scroll={false}>
-      <Link
+      <ChakraLink
         p={2}
         bg={active ? `grassTeal` : undefined}
         color={active ? `#202023` : inactiveColor}
       >
         {children}
-      </Link>
+      </ChakraLink>
     </NextLink>
   );
 };
 
-const Navbar = (props: React.ComponentProps<any>) => {
+interface NavbarProps {
+  path: string;
+}
+
+const Navbar: React.FC<NavbarProps> = (props) => {
   const { path } = props;
 
   return (
@@ -85,15 +90,19 @@ const Navbar = (props: React.ComponentProps<any>) => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={ChakraLink}>About</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem as={ChakraLink}>Works</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem as={ChakraLink}>Posts</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="https://github.com/kavinjsir/site">
+                <MenuItem
+                  as={ChakraLink}
+                  href="https://github.com/kavinjsir/site"
+                  isExternal
+                >
                   View Source
                 </MenuItem>
               </MenuList>
