@@ -1,4 +1,3 @@
-import Logo from './logo';
 import NextLink from 'next/link';
 import {
   Container,
@@ -15,6 +14,9 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+
+import Logo from '@/components/logo';
+import ToggleThemeButton from '@/components/toggle-theme-button';
 
 interface LinkItemProps {
   href: string;
@@ -80,6 +82,8 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         </Stack>
 
         <Box flex={1}>
+          <ToggleThemeButton />
+
           <Box ml={2} display={{ base: `inline-block`, md: `none` }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
