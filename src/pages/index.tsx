@@ -1,8 +1,11 @@
-import { Container, Box, Heading, chakra } from '@chakra-ui/react';
+import { Container, Box, Button, Heading, chakra } from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
+import NextLink from 'next/link';
 
 import Section from '@/components/section';
 import Paragraph from '@/components/paragraph';
+import { BioSection, BioYear } from '@/components/bio';
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => [`width`, `height`, `src`, `alt`].includes(prop),
@@ -15,12 +18,12 @@ const Page = () => {
         Waaaarning! Waaaarning!! 哇宁!!!
       </Box>
 
-      <Box display="flex">
+      <Box display={{ md: `flex` }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Tony Gu
           </Heading>
-          <p>TODO: lalalalala</p>
+          <p>To Be Pragmatic( Developer / Student / Contributor )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -62,6 +65,48 @@ const Page = () => {
           Recently, I&apos;ve been developing the Kubebuilder Community. You can
           meet me on @Kubernetes channel.
         </Paragraph>
+
+        <Box align="center" my={4}>
+          <NextLink href="/works" passHref scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+
+      <Section delay="0.2">
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1994</BioYear>
+          Born in Shanghai (上海), China.
+        </BioSection>
+        <BioSection>
+          <BioYear>2018</BioYear>
+          Completed the Bachelor&apos;s Program in the Software School of SJTU
+          (上海交通大学)
+        </BioSection>
+        <BioSection>
+          <BioYear>2017</BioYear>
+          Worked at Morgan Stanley
+        </BioSection>
+        <BioSection>
+          <BioYear>2018 - 2021</BioYear>
+          Working at SecondSpectrum
+        </BioSection>
+        <BioSection>
+          <BioYear>2022 -</BioYear>
+          Studying at BU; Open-source Contribution
+        </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ♥
+        </Heading>
+        <Paragraph>Running, Classical Music, Programming</Paragraph>
       </Section>
     </Container>
   );
