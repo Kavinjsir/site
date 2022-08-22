@@ -9,7 +9,7 @@ const StyledDiv = chakra(motion.div, {
 
 interface SectionProps {
   children: React.ReactNode;
-  delay: string;
+  delay?: string;
 }
 
 const Section: React.FC<SectionProps> = ({ children, delay = `0` }) => (

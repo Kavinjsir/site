@@ -1,12 +1,12 @@
 import NextLink from 'next/link';
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
 interface ItemProps {
   children: React.ReactNode;
   title: string;
-  thumbnail: string;
+  thumbnail: StaticImageData;
 }
 
 type GridItemProps = ItemProps & {
