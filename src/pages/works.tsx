@@ -20,7 +20,7 @@ const Works = () => {
               title="Kubebuilder Grafana Plugin"
               thumbnail={thumbKb}
             >
-              A Grafana plugin for Kubebuilder to simpilify to operator
+              A Grafana plugin for Kubebuilder to simpilify operator
               observability
             </WorkGridItem>
           </Section>

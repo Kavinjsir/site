@@ -94,7 +94,7 @@ const Page = () => {
         </BioSection>
         <BioSection>
           <BioYear>2018 - 2021</BioYear>
-          Working at SecondSpectrum
+          Worked at SecondSpectrum
         </BioSection>
         <BioSection>
           <BioYear>2022 -</BioYear>
@@ -102,7 +102,7 @@ const Page = () => {
         </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+      <Section delay="0.3">
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
