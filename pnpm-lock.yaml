@@ -26,6 +26,7 @@ specifiers:
   prettier: 2.7.1
   react: 18.2.0
   react-dom: 18.2.0
+  react-icons: 4.4.0
   typescript: 4.7.4
 
 dependencies:
@@ -34,6 +35,7 @@ dependencies:
   next: 12.2.3_twoewwu6sg7cdf3ao6njtbftne
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.4.0_react@18.2.0
 
 devDependencies:
   '@chakra-ui/react': 2.2.8_pfyigycnene34nz5tn5ypsuepi
@@ -4238,6 +4240,14 @@ packages:
       use-callback-ref: 1.3.0_3hx2ussxxho4jajbwrd6gq34qe
       use-sidecar: 1.1.2_3hx2ussxxho4jajbwrd6gq34qe
     dev: true
+
+  /react-icons/4.4.0_react@18.2.0:
+    resolution: {integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}

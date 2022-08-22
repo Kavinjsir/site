@@ -32,7 +32,7 @@ const Logo = () => {
       <a>
         <LogoBox>
           <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text color={textColor}>Tony Gu</Text>
+          <Text color={textColor}>Tony J</Text>
         </LogoBox>
       </a>
     </Link>

@@ -1,7 +1,17 @@
-import { Container, Box, Button, Heading, chakra } from '@chakra-ui/react';
+import {
+  Container,
+  Box,
+  Button,
+  Heading,
+  chakra,
+  List,
+  ListItem,
+  Link,
+} from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NextLink from 'next/link';
+import { IoLogoGithub, IoLogoSlack, IoMail } from 'react-icons/io5';
 
 import Section from '@/components/section';
 import Paragraph from '@/components/paragraph';
@@ -21,7 +31,7 @@ const Page = () => {
       <Box display={{ md: `flex` }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Tony Gu
+            Tony J
           </Heading>
           <p>To Be Pragmatic( Developer / Student / Contributor )</p>
         </Box>
@@ -107,6 +117,46 @@ const Page = () => {
           I ♥
         </Heading>
         <Paragraph>Running, Classical Music, Programming</Paragraph>
+      </Section>
+
+      <Section delay="0.3">
+        <Heading as="h3" variant="section-title">
+          On the web
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/kavinjsir" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoGithub />}
+              >
+                @TianYi(Tony)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="https://kubernetes.slack.com/team/U0352A45K6K"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoSlack />}
+              >
+                @TianYi(Tony)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="kavinjsir@gmail.com" target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<IoMail />}>
+                @Tony J
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
       </Section>
     </Container>
   );
