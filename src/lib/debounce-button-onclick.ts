@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 export function simpleDebounce(func: () => void, timeout = 200) {
   let timer: NodeJS.Timeout;
 
@@ -22,4 +24,21 @@ export function debounceLead(func: () => void, timeout = 200) {
   };
 
   return handler;
+}
+
+export function useDebounce<T>(value: T, delay: number): T {
+  // State and setters for debounced value
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
 }

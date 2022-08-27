@@ -1,23 +1,31 @@
-import { Button } from '@chakra-ui/react';
+import { Button, useClipboard, useToast } from '@chakra-ui/react';
 import { IoMail } from 'react-icons/io5';
-
-import { debounceLead } from '@/lib/debounce-button-onclick';
+import { useEffect } from 'react';
 
 interface CopyButtonProps {
   content: string;
 }
 
 const CopyButton: React.FC<CopyButtonProps> = ({ content }) => {
-  const handleOnClick = () => {
-    navigator.clipboard.writeText(content);
-  };
+  const { hasCopied, onCopy } = useClipboard(content);
+  const toast = useToast();
+
+  useEffect(() => {
+    if (!hasCopied) return;
+    toast({
+      title: `"${content}" copied.`,
+      status: `success`,
+      isClosable: true,
+      duration: 1500,
+    });
+  }, [hasCopied]);
 
   return (
     <Button
       variant="ghost"
       colorScheme="teal"
       leftIcon={<IoMail />}
-      onClick={debounceLead(handleOnClick)}
+      onClick={onCopy}
     >
       @Tony J
     </Button>
