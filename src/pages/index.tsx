@@ -11,11 +11,12 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { IoLogoGithub, IoLogoSlack, IoMail } from 'react-icons/io5';
+import { IoLogoGithub, IoLogoSlack } from 'react-icons/io5';
 
 import Section from '@/components/section';
 import Paragraph from '@/components/paragraph';
 import { BioSection, BioYear } from '@/components/bio';
+import CopyButton from '@/components/copy-button';
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => [`width`, `height`, `src`, `alt`].includes(prop),
@@ -150,11 +151,7 @@ const Page = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="kavinjsir@gmail.com" target="_blank">
-              <Button variant="ghost" colorScheme="teal" leftIcon={<IoMail />}>
-                @Tony J
-              </Button>
-            </Link>
+            <CopyButton content="kavinjsir@gmail.com" />
           </ListItem>
         </List>
       </Section>
