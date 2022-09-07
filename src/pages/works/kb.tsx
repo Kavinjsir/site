@@ -8,6 +8,8 @@ import {
   ListIcon,
   AspectRatio,
   Divider,
+  Box,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon, CheckIcon } from '@chakra-ui/icons';
 import { Title, Meta } from '@/components/work';
@@ -63,33 +65,6 @@ const Work = () => (
               target="_blank"
             >
               kubernetes-sigs/kubebuilder:v3.6.0 <ExternalLinkIcon mx="2px" />
-            </Link>
-          </ListItem>
-        </List>
-      </Section>
-
-      <Section delay="0.1">
-        <Heading as="h3" variant="section-title">
-          Mentors
-        </Heading>
-
-        <List ml={4} my={4}>
-          <ListItem>
-            <Link href="https://github.com/camilamacedo86" target="_blank">
-              Camila{` `}
-              <ExternalLinkIcon mx="2px" />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://github.com/varshaprasad96" target="_blank">
-              Varsha{` `}
-              <ExternalLinkIcon mx="2px" />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://github.com/rashmigottipati" target="_blank">
-              Rashmi{` `}
-              <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
         </List>
@@ -158,6 +133,49 @@ const Work = () => (
             </Link>
           </ListItem>
         </List>
+      </Section>
+
+      <Section delay="0.1">
+        <Heading as="h3" variant="section-title">
+          Mentors
+        </Heading>
+
+        <List ml={4} my={4}>
+          <ListItem>
+            <Link href="https://github.com/camilamacedo86" target="_blank">
+              Camila{` `}
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/varshaprasad96" target="_blank">
+              Varsha{` `}
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/rashmigottipati" target="_blank">
+              Rashmi{` `}
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
+        </List>
+
+        <Box
+          borderRadius="lg"
+          mb={6}
+          p={3}
+          bg={useColorModeValue(`whiteAlpha.500`, `whiteAlpha.200`)}
+          css={{ backdropFilter: `blur(10px)` }}
+        >
+          Special thanks for my mentors! Camila has helped me greatly on landing
+          the community, managing our program and supporting me greatly on every
+          perspective. Varsha is my direct leader that always brought me great
+          ideas on coding, patterns, feature exploration. She&apos;s always
+          reviewing my code carefully with rich guidance. And a big thanks to
+          Rashmi where she has brought great ideas when we were facing
+          challenges.
+        </Box>
       </Section>
 
       <Section delay="0.1">

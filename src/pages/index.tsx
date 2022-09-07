@@ -34,7 +34,7 @@ const Page = () => {
         bg={useColorModeValue(`whiteAlpha.500`, `whiteAlpha.200`)}
         css={{ backdropFilter: `blur(10px)` }}
       >
-        Hello, I&apos;m an open source software developer based in Boston!
+        Hello 👋, I&apos;m an open source programmer based in Boston.
       </Box>
 
       <Box display={{ md: `flex` }}>
