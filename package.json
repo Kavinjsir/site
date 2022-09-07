@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "next -H 0.0.0.0",
     "build": "next build",
+    "build-static": "next build && next export",
     "start": "next start",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
