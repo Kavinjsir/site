@@ -37,10 +37,10 @@ const Work = () => (
           <ListItem>
             <Meta>Website</Meta>
             <Link
-              href="https://book.kubebuilder.io/plugins/grafana-v1-alpha.html"
+              href="https://master.book.kubebuilder.io/plugins/grafana-v1-alpha.html"
               target="_blank"
             >
-              https://book.kubebuilder.io/plugins/grafana-v1-alpha.html{` `}
+              master.book.kubebuilder.io{` `}
               <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
