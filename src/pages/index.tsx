@@ -7,6 +7,7 @@ import {
   List,
   ListItem,
   Link,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
@@ -25,8 +26,15 @@ const ProfileImage = chakra(Image, {
 const Page = () => {
   return (
     <Container>
-      <Box borderRadius="lg" bg="teal" p={3} mb={6}>
-        Waaaarning! Waaaarning!! 哇宁!!!
+      <Box
+        borderRadius="lg"
+        mb={6}
+        p={3}
+        textAlign="center"
+        bg={useColorModeValue(`whiteAlpha.500`, `whiteAlpha.200`)}
+        css={{ backdropFilter: `blur(10px)` }}
+      >
+        Hello, I&apos;m an open source software developer based in Boston!
       </Box>
 
       <Box display={{ md: `flex` }}>
@@ -80,7 +88,7 @@ const Page = () => {
         <Box align="center" my={4}>
           <NextLink href="/works" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+              My Projects
             </Button>
           </NextLink>
         </Box>
