@@ -101,7 +101,7 @@ const Work = () => (
           </ListItem>
           <ListItem>
             <ListIcon as={CheckIcon} color="teal.500" />
-            Phase 1.2: Display CPU/Memory Usage{` `}
+            Phase 1.1: Display CPU/Memory Usage{` `}
             <Link
               href="https://github.com/kubernetes-sigs/kubebuilder/pull/2797"
               target="_blank"
@@ -111,7 +111,7 @@ const Work = () => (
           </ListItem>
           <ListItem>
             <ListIcon as={CheckIcon} color="teal.500" />
-            Phase 1.3: Add WorkQueue Panels{` `}
+            Phase 1.2: Add WorkQueue Panels{` `}
             <Link
               href="https://github.com/kubernetes-sigs/kubebuilder/pull/2834"
               target="_blank"
@@ -180,11 +180,25 @@ const Work = () => (
 
       <Section delay="0.1">
         <Heading as="h3" variant="section-title">
-          Demo
+          Demo I: Basic Usages
         </Heading>
         <AspectRatio maxW="640px" ratio={1.7} my={4}>
           <iframe
             src="https://www.youtube.com/embed/-w_JjcV8jXc"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </AspectRatio>
+      </Section>
+      <Section delay="0.1">
+        <Heading as="h3" variant="section-title">
+          Demo II: Render Custom Metrics
+        </Heading>
+        <AspectRatio maxW="640px" ratio={1.7} my={4}>
+          <iframe
+            src="https://www.youtube.com/embed/x_0FHta2HXc"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
