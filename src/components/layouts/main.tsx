@@ -1,8 +1,15 @@
+import { Box, Container } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import type { NextRouter } from 'next/router';
-import { Box, Container } from '@chakra-ui/react';
 
+import ModelLoader from '@/components/model-loader';
 import Navbar from '@/components/navbar';
+
+const LazyModel = dynamic(() => import(`@/components/model`), {
+  ssr: false,
+  loading: () => <ModelLoader />,
+});
 
 interface MainProps {
   children: React.ReactNode;
@@ -18,6 +25,8 @@ const Main = ({ children, router }: MainProps) => {
       </Head>
       <Navbar path={router.asPath} />
       <Container maxW="container.md" pt={14}>
+        <LazyModel />
+
         {children}
       </Container>
     </Box>
