@@ -10,7 +10,7 @@ const MODEL_GLB = `/model.glb`;
 
 const easeOutCirc = (x: number) => Math.sqrt(1 - Math.pow(x - 1, 4));
 
-const VoxelDog = () => {
+const Keyboard = () => {
   const refContainer = useRef<any>();
   const [loading, setLoading] = useState(true);
   const refRenderer = useRef<any>();
@@ -77,7 +77,7 @@ const VoxelDog = () => {
 
       frame = frame <= 100 ? frame + 1 : frame;
 
-      if (frame <= 100) {
+      if (frame > 100) {
         const p = initialCameraPosition;
         const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
 
@@ -124,4 +124,4 @@ const VoxelDog = () => {
   );
 };
 
-export default VoxelDog;
+export default Keyboard;

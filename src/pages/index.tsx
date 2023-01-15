@@ -76,13 +76,13 @@ const Page = () => {
         </Heading>
         <Paragraph>
           Hi, I&apos;m Tony, currently studying for MSCS in Boston University.
-          Before that, I worked in SecondSpectrum as a DevOps Engineer for 2
+          Before that, I worked in SecondSpectrum as a DevOps Engineer for 3
           yrs. There, I built infrastructure based on K8s, Prometheus, Grafana.
           Prior to that, I worked in Morgan Stanley where I developed the
           clearing system for Sydney Future Exchange. I&apos;d be interested in
           open source contribution especially in the field of cloud native.
-          Recently, I&apos;ve been developing the Kubebuilder Community. You can
-          meet me on @Kubernetes channel.
+          Recently, I&apos;ve been developing in the kubernetes-sigs community.
+          You can meet me on @Kubernetes channel.
         </Paragraph>
 
         <Box align="center" my={4}>
