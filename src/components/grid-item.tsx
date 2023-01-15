@@ -1,7 +1,6 @@
 import NextLink from 'next/link';
 import Image, { type StaticImageData } from 'next/image';
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
 
 interface ItemProps {
   children: React.ReactNode;
@@ -65,8 +64,4 @@ export const WorkGridItem = ({
       </LinkBox>
     </NextLink>
   </Box>
-);
-
-export const GridItemStyle = () => (
-  <Global styles={`.grid-item-thumbnail { border-radius: 12px; }`} />
 );

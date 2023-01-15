@@ -12,10 +12,12 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon, CheckIcon } from '@chakra-ui/icons';
+import Image from 'next/image';
 import { Title, Meta } from '@/components/work';
 import P from '@/components/paragraph';
 import Layout from '@/components/layouts/article';
 import Section from '@/components/section';
+import thumbKb from '@/public/images/works/kubebuilder_logo.png';
 
 const Work = () => (
   <Layout title="Grafana plugin">
@@ -23,6 +25,13 @@ const Work = () => (
       <Title>
         Kubebuilder Grafana Plugin <Badge>2022-</Badge>
       </Title>
+      <Image
+        src={thumbKb}
+        alt="Kubebuilder Grafana Plugin"
+        className="grid-item-thumbnail"
+        placeholder="blur"
+        loading="lazy"
+      />
       <P>
         A Kubebuilder plugin that scaffolds Grafana Dashboards to simpilify your
         operator observability through rich metrics from controller-runtime.
@@ -186,7 +195,7 @@ const Work = () => (
           <iframe
             src="https://www.youtube.com/embed/-w_JjcV8jXc"
             title="YouTube video player"
-            frameBorder="0"
+            style={{ border: 0 }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
@@ -200,7 +209,7 @@ const Work = () => (
           <iframe
             src="https://www.youtube.com/embed/x_0FHta2HXc"
             title="YouTube video player"
-            frameBorder="0"
+            style={{ border: 0 }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />

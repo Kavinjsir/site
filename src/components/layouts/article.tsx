@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import { GridItemStyle } from '@/components/grid-item';
+import { GlobalStyle } from '@/components/global-style';
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -33,7 +33,7 @@ const Layout = ({ children, title }: LayoutProps) => {
           </Head>
         )}
         {children}
-        <GridItemStyle />
+        <GlobalStyle />
       </>
     </motion.article>
   );
