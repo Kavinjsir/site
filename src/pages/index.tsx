@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import NextLink from 'next/link';
 import { IoLogoGithub, IoLogoSlack } from 'react-icons/io5';
 
@@ -64,8 +64,8 @@ const Page = () => {
               src="/images/profile.jpeg"
               alt="Profile image"
               borderRadius="full"
-              width="100%"
-              height="100%"
+              width="100"
+              height="100"
             />
           </Box>
         </Box>
@@ -86,11 +86,15 @@ const Page = () => {
         </Paragraph>
 
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My Projects
-            </Button>
-          </NextLink>
+          <Button
+            as={NextLink}
+            href="/works"
+            scroll={false}
+            rightIcon={<ChevronRightIcon />}
+            colorScheme="teal"
+          >
+            My Projects
+          </Button>
         </Box>
       </Section>
 

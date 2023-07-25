@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon, CheckIcon } from '@chakra-ui/icons';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { Title, Meta } from '@/components/work';
 import P from '@/components/paragraph';
 import Layout from '@/components/layouts/article';

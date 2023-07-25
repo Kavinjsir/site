@@ -14,6 +14,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { forwardRef } from 'react';
 
 import Logo from '@/components/logo';
 import ToggleThemeButton from '@/components/toggle-theme-button';
@@ -29,17 +30,23 @@ const LinkItem = ({ href, path, children }: LinkItemProps) => {
   const inactiveColor = useColorModeValue(`gray200`, `whiteAlpha.900`);
 
   return (
-    <NextLink href={href} passHref scroll={false}>
-      <ChakraLink
-        p={2}
-        bg={active ? `grassTeal` : undefined}
-        color={active ? `#202023` : inactiveColor}
-      >
-        {children}
-      </ChakraLink>
-    </NextLink>
+    <ChakraLink
+      as={NextLink}
+      href={href}
+      scroll={false}
+      p={2}
+      bg={active ? `grassTeal` : undefined}
+      color={active ? `#202023` : inactiveColor}
+    >
+      {children}
+    </ChakraLink>
   );
 };
+
+const MenuLink = forwardRef<HTMLAnchorElement, { href: string }>(
+  (props, ref) => <ChakraLink ref={ref} as={NextLink} {...props} />,
+);
+MenuLink.displayName = `MyMenuLink`;
 
 interface NavbarProps {
   path: string;
@@ -102,15 +109,15 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={ChakraLink}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={ChakraLink}>Works</MenuItem>
-                </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={ChakraLink}>Posts</MenuItem>
-                </NextLink>
+                <MenuItem as={MenuLink} href="/">
+                  About
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/works">
+                  Works
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/posts">
+                  Posts
+                </MenuItem>
                 <MenuItem
                   as={ChakraLink}
                   href="https://github.com/kavinjsir/site"

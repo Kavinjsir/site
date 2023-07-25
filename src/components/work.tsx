@@ -17,9 +17,9 @@ interface WorkMetaProps {
 
 export const Title = ({ children }: WorkTitleProps) => (
   <Box>
-    <NextLink href="/works" passHref>
-      <Link>Works</Link>
-    </NextLink>
+    <Link as={NextLink} href="/works">
+      Works
+    </Link>
     <span>
       {` `}
       <ChevronRightIcon />

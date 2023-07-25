@@ -1,7 +1,7 @@
-import Image, { type StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/legacy/image';
 import NextLink from 'next/link';
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
+// import { Global } from '@emotion/react';
 
 interface PostItemProps {
   children: React.ReactNode;

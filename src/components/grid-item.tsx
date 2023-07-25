@@ -46,22 +46,25 @@ export const WorkGridItem = ({
   thumbnail,
 }: WorkGridItemProps) => (
   <Box w="100%" textAlign="center">
-    <NextLink href={`/works/${id}`} passHref scroll={false}>
-      <LinkBox cursor="pointer">
-        <Image
-          src={thumbnail}
-          alt={title}
-          className="grid-item-thumbnail"
-          placeholder="blur"
-          loading="lazy"
-        />
-        <LinkOverlay href={`/works/${id}`}>
-          <Text mt={2} fontSize={20}>
-            {title}
-          </Text>
-        </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
-      </LinkBox>
-    </NextLink>
+    <LinkBox
+      as={NextLink}
+      href={`/works/${id}`}
+      scroll={false}
+      cursor="pointer"
+    >
+      <Image
+        src={thumbnail}
+        alt={title}
+        className="grid-item-thumbnail"
+        placeholder="blur"
+        loading="lazy"
+      />
+      <LinkOverlay as="div" href={`/works/${id}`}>
+        <Text mt={2} fontSize={20}>
+          {title}
+        </Text>
+      </LinkOverlay>
+      <Text fontSize={14}>{children}</Text>
+    </LinkBox>
   </Box>
 );

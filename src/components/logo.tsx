@@ -29,12 +29,10 @@ const Logo = () => {
 
   return (
     <Link href="/" scroll={false}>
-      <a>
-        <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text color={textColor}>Tony J</Text>
-        </LogoBox>
-      </a>
+      <LogoBox>
+        <Image src={footPrintImg} width={20} height={20} alt="logo" />
+        <Text color={textColor}>Tony J</Text>
+      </LogoBox>
     </Link>
   );
 };
